@@ -5,14 +5,18 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:id="@+id/container"
         android:layout_height="match_parent">
 
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
+            android:padding="16dp"
             app:cardBackgroundColor="@color/primaryColor"
+            app:cardUseCompatPadding="true"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
@@ -29,16 +33,27 @@
         </com.google.android.material.card.MaterialCardView>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button_phrases"
             style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="208dp"
-            android:layout_height="85dp"
-            android:layout_marginBottom="136dp"
-            android:text="Play with Phrases"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/play_with_phrases"
             android:textColor="@color/primaryTextColor"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="160dp"
+            android:text="@string/clear"
+            app:layout_constraintBottom_toBottomOf="@+id/button_phrases"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

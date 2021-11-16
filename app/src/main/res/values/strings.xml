@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Phrase_O_Matic</string>
+    <string name="play_with_phrases">Play with Phrases</string>
+    <string name="reset">Reset</string>
+    <string name="clear">CLear</string>
+    <string name="about">About</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

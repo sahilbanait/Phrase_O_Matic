@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -24,21 +26,28 @@ public class Fragment_Main extends Fragment {
 
 
     private FragmentMainBinding binding;
-    TextView textView;
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false);
 
-        binding.button.setOnClickListener(new View.OnClickListener() {
+        binding.buttonPhrases.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                mainMethod();
             }
         });
+        binding.buttonReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.textView.setText("");
+            }
+        });
         return binding.getRoot();
     }
+
     void mainMethod() {
         String[] wordListOne = {
                 " kick for "," push for "," guidance for "
