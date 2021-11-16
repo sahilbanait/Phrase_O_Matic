@@ -9,5 +9,14 @@
         android:id="@+id/fragment_Main"
         android:name="com.example.phrase_o_matic.Fragment_Main"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_fragment_Main_to_about"
+            app:destination="@id/about" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="com.example.phrase_o_matic.About"
+        android:label="About"
+        tools:layout="@layout/about"/>
 </navigation>
