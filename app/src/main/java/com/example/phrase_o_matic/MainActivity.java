@@ -12,20 +12,16 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.Toast;
 
 import com.example.phrase_o_matic.databinding.ActivityMainBinding;
-import com.google.android.material.snackbar.BaseTransientBottomBar;
-import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -53,13 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        CharSequence about = "About";
-        View v = findViewById(R.id.container);
         if (item.getItemId() == R.id.about) {
-            Snackbar.make(v, about, Snackbar.LENGTH_LONG).show();
+            Toast.makeText(this, "About Clicked", Toast.LENGTH_LONG).show();
             NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
             navController.navigate(R.id.about);
-
             return true;
         }
         return super.onOptionsItemSelected(item);
